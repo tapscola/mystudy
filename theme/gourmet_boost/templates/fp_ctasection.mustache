@@ -1,0 +1,29 @@
+{{#hasctasection}}     
+<section class="cta-section">    
+	<div class="container">
+		<div class="cta-section-inner">
+			<div class="row align-items-center">  
+			    <div class="col-lg-9 col-12">
+			    {{#ctatitle}}
+			    <h1 class="section-heading">{{{ctatitle}}}</h1>
+			    {{/ctatitle}}
+			    {{#ctacontent}}
+			    <div class="section-content">{{{ctacontent}}}</div>  
+			    {{/ctacontent}}
+			    </div>  
+			    {{#hasctabutton}}
+			    <div class="col-lg-3 col-12">
+				    {{#ctaurl}}
+			        <a class="btn btn-cta" href="{{{ctaurl}}}" {{#urlopennew}}target="_blank"{{/urlopennew}}>
+				    {{/ctaurl}}
+				        {{{ctabutton}}}<i class="fa fa-play-circle fa-after"></i>
+				    {{#ctaurl}}
+				    </a>  
+				    {{/ctaurl}}
+			    </div>
+			    {{/hasctabutton}}    
+			</div><!--//row-->   
+		</div> 
+	</div> 
+</section><!--//cta-section-->
+{{/hasctasection}}

@@ -1,0 +1,603 @@
+/********* Theme Base *********/
+%card-box-shadow {
+	@include box-shadow(0 1px 2px rgba(0,0,0,.1));
+	&:hover {
+		@include box-shadow(0 5px 10px rgba(0,0,0,0.2), 0 2px 5px rgba(0,0,0,0.15));
+	}
+}
+%remove-card-box-shadow {
+	@include box-shadow(none);
+}
+
+.container-fluid {
+	max-width: 1680px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+body {
+    //background-color: $smoky-white;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    color: $theme-text-color-primary;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, legend  {
+    font-family: 'open sans', arial, sans-serif;
+    font-weight: 500;
+}
+
+abbr[title], abbr[data-original-title] {
+	border-bottom: none;
+	text-decoration: none;
+}
+
+.btn-link {
+	color: $theme-color-primary;
+	&:hover, &:active {
+        color: darken($theme-color-primary, 5%);        
+    }
+}
+
+legend {
+	font-size: 16px;
+}
+
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: $theme-color-primary;
+    @include transition (all 0.4s ease-in-out);
+    &:hover, &:active {
+        text-decoration: underline;
+        color: darken($theme-color-primary, 5%);        
+    }
+    &:focus {
+        text-decoration: none;
+        color: darken($theme-color-primary, 5%); 
+        outline: none;
+    }
+}
+
+td {
+
+	a {
+		color: $theme-text-color-secondary;
+	}
+}
+th {
+
+	color: $theme-text-color-primary;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="button"], 
+textarea
+{
+    appearance: none;  /* for mobile safari */
+    -webkit-appearance: none;
+}
+
+
+.btn, a.btn {
+    @include transition (all 0.4s ease-in-out);
+    padding: 10px 16px;
+    border: none;
+    font-weight: bold;
+    text-shadow: none;
+    @include border-radius(0);
+    @include box-shadow(none);
+    font-weight: 400;
+
+    &:hover, &:active, &:focus {
+        border: none;
+        outline: none;
+    }
+    .fa {
+        color: #fff;
+        margin-right: 5px;
+    }
+    .text_to_html {
+	    display: inline-block;
+    }
+}
+
+.btn-default, a.btn-default {
+    border: 1px solid $theme-divider-color;
+    color: $theme-text-color-secondary;
+    .fa {
+        color: $theme-text-color-secondary;
+    }
+    &:hover, &:active, &:focus {
+        border: 1px solid darken($theme-divider-color, 15%);
+        color: $theme-text-color-primary;
+    }
+}
+
+.btn-primary, a.btn-primary {
+    background: $theme-color-primary;
+    border: 1px solid $theme-color-primary;
+    color: #fff;
+    &:hover, &:active, &:focus {
+        background: darken($theme-color-primary, 10%) !important;
+        border: none;
+        color: #fff;
+    }
+}
+
+
+.btn-cta, a.btn-cta { 
+    background: $theme-color-primary;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.33;
+    @include border-radius(0);
+    @include text-shadow(none);
+    border: 1px solid $theme-color-primary;
+    font-family: 'open sans', arial, sans-serif;
+    
+    &:hover, &:focus, &:active {
+        color: #fff;
+        background: darken($theme-color-primary, 10%);
+        border: 1px solid darken($theme-color-primary, 10%);
+    }
+    .fa {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #fff;
+        &.fa-after {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+    }
+}
+
+
+input[type="submit"], input[type="button"]  {
+	@include transition (all 0.4s ease-in-out);
+    @include border-radius(0.25rem);
+    font-weight: 700;
+    padding: 8px 20px;
+	background: $theme-color-primary;
+    border: 1px solid $theme-color-primary;
+    color: #fff;
+
+    &:hover, &:active, &:focus, &.hover, &.active, &.focus {
+        background: darken($theme-color-primary, 5%);
+        border: 1px solid darken($theme-color-primary, 5%);
+        color: #fff;
+        outline: none;
+        @include box-shadow(none);
+    }
+}
+
+
+a.btn-secondary, .btn-secondary, input.btn-secondary, a.btn-default, .btn-default { 
+    background: #fff;
+    border: 1px solid $theme-text-color-light;
+    color: darken($theme-text-color-light, 10%);
+    .icon, .fa {
+	    color: darken($theme-text-color-light, 10%);
+    }
+
+    &:hover, &:focus, &.hover, &.focus{
+        background: #fff;
+        border: 1px solid darken($theme-text-color-light, 5%);
+        color: darken($theme-text-color-light, 5%);
+        outline: none;
+        @include box-shadow(none);
+    }
+    
+    &.active, &:active {
+	    background: darken($theme-text-color-light, 5%);
+	    border: 1px solid darken($theme-text-color-light, 5%);
+	    color: #fff;
+	    &.hover {
+		   background: darken($theme-text-color-light, 5%);
+		   border: 1px solid darken($theme-text-color-light, 5%);
+		   color: #fff; 
+	    }
+	    .icon {
+		    color: #fff;
+	    }
+	    @include box-shadow(none);
+    }
+
+}
+
+
+
+
+.btn-secondary:active:hover, .btn-default:active:hover, .btn-secondary.active:hover, .fp-viewbar:not(.disabled) a.checked:hover, .btn-default.active:hover, .open > .btn-secondary.dropdown-toggle:hover, .open > .btn-default.dropdown-toggle:hover, .btn-secondary:active:focus, .btn-default:active:focus, .btn-secondary.active:focus, .fp-viewbar:not(.disabled) a.checked:focus, .btn-default.active:focus, .open > .btn-secondary.dropdown-toggle:focus, .open > .btn-default.dropdown-toggle:focus, .btn-secondary:active.focus, .btn-default:active.focus, .btn-secondary.active.focus, .fp-viewbar:not(.disabled) a.checked.focus, .btn-default.active.focus, .open > .btn-secondary.dropdown-toggle.focus, .open > .btn-default.dropdown-toggle.focus {
+	background: darken($theme-text-color-secondary, 5%);
+    border: 1px solid darken($theme-text-color-secondary, 5%);
+    color: #fff;
+    @include box-shadow(none);
+    .icon {
+	    color: #fff;
+    }
+}
+
+.btn-secondary.disabled, .fp-viewbar.disabled a, .btn-default.disabled, .btn-secondary:disabled, .btn-default:disabled {
+	background: $theme-text-color-light;
+	color: darken($theme-text-color-light, 20%);
+	border-color: $theme-text-color-light;
+	cursor: not-allowed;
+	&:hover, &:focus, &:active, &.hover, &.active, &.focus {
+		background: $theme-text-color-light;
+	    color: darken($theme-text-color-light, 20%);
+	    border-color: $theme-text-color-light;
+	    @include box-shadow(none);
+	}
+}
+
+
+button.btn-secondary[type="submit"] {
+	background: $theme-color-primary;
+	color: #fff;
+	&:hover, &:focus, &:active, &.hover, &.active, &.focus {
+		background: darken($theme-color-primary, 10%);
+		color: #fff;
+		outline: none;
+	}
+}
+
+
+button.btn-secondary[type="submit"], button.btn-default[type="submit"] {
+	border: none;
+}
+
+.btn, #page-grade-grading-manage .actions .action, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input, #rubric-rubric.gradingform_rubric .addcriterion {
+	@include border-radius(0);
+}
+
+.btn.disabled, .fp-viewbar.disabled a, #page-grade-grading-manage .actions .action.disabled, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input.disabled, #rubric-rubric.gradingform_rubric .addcriterion.disabled, .btn:disabled, #page-grade-grading-manage .actions .action:disabled, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:disabled, #rubric-rubric.gradingform_rubric .addcriterion:disabled {
+	@include opacity(0.4);
+	&:hover, &.hover {
+		
+		@include opacity(0.4);
+		@include box-shadow(none);
+	}
+}
+
+.btn-primary:active:hover, .btn-primary.active:hover, .open>.btn-primary.dropdown-toggle:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open>.btn-primary.dropdown-toggle:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open>.btn-primary.dropdown-toggle.focus, .open>.btn-primary.dropdown-toggle {
+	background: darken($theme-color-primary, 5%);
+    border: 1px solid darken($theme-color-primary, 5%);
+    color: #fff;
+    @include box-shadow(none);
+}
+
+.btn:focus, #page-grade-grading-manage .actions .action:focus, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:focus, #rubric-rubric.gradingform_rubric .addcriterion:focus, .btn.focus, #page-grade-grading-manage .actions .action.focus, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input.focus, #rubric-rubric.gradingform_rubric .addcriterion.focus {
+	@include box-shadow(none);
+}
+
+.btn-info {
+	color: #fff;
+}
+
+.btn-outline-secondary, .show>.btn-outline-secondary.dropdown-toggle {
+	border: 1px solid $theme-border-color;
+	background: #fff;
+	@include box-shadow(none);
+	color: $theme-text-color-secondary;
+	.icon {
+		color: $theme-text-color-secondary;
+	}
+	&:hover, &:focus, &:active, &.hover, &.active, &.focus {
+		border: 1px solid $theme-border-color;
+		background: #fff;
+		color: $theme-text-color-primary;
+		@include box-shadow(none);
+		.icon {
+			color: $theme-text-color-primary;
+		}
+	}
+}
+
+.btn-outline-secondary:hover, .show>.btn-outline-secondary.dropdown-toggle:hover, .btn-outline-secondary:focus, .show>.btn-outline-secondary.dropdown-toggle:focus, .btn-outline-secondary:active, .show>.btn-outline-secondary.dropdown-toggle:active, .btn-outline-secondary.hover, .show>.btn-outline-secondary.dropdown-toggle.hover, .btn-outline-secondary.active, .show>.btn-outline-secondary.dropdown-toggle.active, .btn-outline-secondary.focus, .show>.btn-outline-secondary.dropdown-toggle.focus {
+	@include box-shadow(none);
+	
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-default:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .fp-viewbar:not(.disabled) a.checked:not(:disabled):not(.disabled), .btn-default:not(:disabled):not(.disabled).active, .show>.btn-secondary.dropdown-toggle, .show>.btn-default.dropdown-toggle {
+	background: $theme-text-color-light;
+	border-color: $theme-text-color-light;
+	
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-default:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .fp-viewbar:not(.disabled) a.checked:not(:disabled):not(.disabled):focus, .btn-default:not(:disabled):not(.disabled).active:focus, .show>.btn-secondary.dropdown-toggle:focus, .show>.btn-default.dropdown-toggle:focus {
+	@include box-shadow(none);
+}
+
+
+
+
+textarea.form-control {
+    height: auto;
+}
+
+blockquote {
+    font-size: 14px;
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+
+.form-control {
+    @include box-shadow(none);
+    padding: 9px 15px;
+    border-color: $theme-border-color;
+    @include placeholder($theme-border-color);
+    font-size: 16px;
+    @include border-radius(0);
+    
+    &:focus {
+        border-color: darken($theme-border-color, 10%);
+        @include box-shadow(none);
+    }    
+}
+
+
+#topcontrol {
+    background: darken($theme-color-primary, 10%);
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    @include border-radius(2px);
+    @include transition (all 0.4s ease-in-out);
+    z-index: 40;
+    &:hover {
+        background: $theme-color-primary;
+    }
+    .fa {
+        position: relative;
+        top: 3px;
+        font-size: 25px;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="button"], 
+textarea{
+    appearance: none;  /* for mobile safari */
+    -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: $light-grey;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $light-grey;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $light-grey;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: $light-grey;
+}
+
+
+.btn-cancel, input.btn-cancel, input[type="submit"].btn-cancel, input[type="submit"].addcancel, button.btn-cancel {
+    background: $grey;
+    border: none;
+    &:hover, &:active, &:focus {
+        background: darken($grey, 10%);
+        border: none;
+    }
+}
+
+.form-group.btn-cancel {
+	background: inherit;
+}
+
+
+button, input.form-submit, input[type="button"], input[type="submit"], input[type="reset"], input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], td.submit input { 
+    background: $theme-color-primary;
+    border: none;
+    color: #fff;
+    text-shadow: none;
+    @include box-shadow(none);
+    @include border-radius(0);
+    
+    &:hover, &:active, &:focus {
+        background: darken($theme-color-primary, 10%);
+        border: none;
+        color: #fff;
+        @include box-shadow(none);
+        text-shadow: none;
+        outline: none;
+    }
+}
+
+button.close:hover {
+	background: none;
+}
+
+.path-admin .buttons input[type=submit], button, input#id_submitbutton, input#id_submitbutton2, input.form-submit, input[type=submit], input[type=button], input[type=reset], td.submit input {
+	background: $theme-color-primary;
+	color: #fff;
+	&:hover, &:active, &:focus {
+        background: darken($theme-color-primary, 10%);
+        border: none;
+        color: #fff;
+        outline: none;
+    }
+}
+
+.singlebutton {
+    div {
+        margin-left: 0;
+    }
+    input[type="submit"] {
+        margin-left: 0;
+    }
+}
+
+button.disabled, input.form-submit.disabled, input[type="button"].disabled, input[type="submit"].disabled, input[type="reset"].disabled, button[disabled], input.form-submit[disabled], input[type="button"][disabled], input[type="submit"][disabled], input[type="reset"][disabled] {
+    @include opacity(0.65);
+    box-shadow: none;
+    background: $theme-color-primary;
+    color: #fff;
+}
+
+
+
+
+.text-info, .highlight {
+	color: $theme-color-primary !important;
+}
+
+.dropdown-menu {
+	background: #fff;
+	color: $theme-text-color-secondary;
+	border: none;
+	@include border-radius(0);
+	@include box-shadow(0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22));
+	font-size: 14px;
+}
+.dropdown-item {
+	color: $theme-text-color-secondary;
+	padding: 6px 20px;
+	&:hover, &:focus {
+		background: $smoky-white;
+	}
+	.icon {
+		color: $theme-text-color-secondary;
+	}
+}
+
+
+
+.action-menu .dropdown-toggle {
+	color: $theme-text-color-secondary;
+	&:hover {
+		color: $theme-text-color-primary;
+	}
+}
+
+
+.nav-tabs {
+    border-bottom: none;
+    position: relative;
+    margin-bottom: -1px;
+    .nav-link {
+	    @include border-radius(0);
+	    border-bottom: none;
+	    &:hover, &:focus {
+		    border-bottom: none;
+		    background: #fff;
+	    }
+    }
+}
+
+.tab-content {
+    border: 1px solid $theme-divider-color;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    margin-top: 0!important;
+}
+
+
+.nav>li>a {
+    font-size: 13px;
+}
+
+.nav-tabs>li>a {
+    border: 1px solid $theme-divider-color;
+    border-bottom: none;
+    background: lighten($smoky-white, 2%);
+    padding: 10px 15px;
+    margin-right: 0;
+    @include border-radius(0);
+    color: $theme-text-color-primary;
+    @include transition (all 0s);
+}
+
+.nav-tabs>li {
+    margin-right: 2px;
+}
+
+
+.nav-tabs>li.active {
+    margin-bottom: 0;
+}
+.nav-tabs a.nav-link.active, .nav-tabs a.nav-link.active:hover, .nav-tabs a.nav-link.active:active, .nav-tabs a.nav-link.active:focus{
+    border-bottom: 0;
+    border-top: 2px solid $theme-color-primary;
+    margin-bottom: 0px;
+}
+
+
+
+/* icon sizing */
+	.fa-1 {
+	    font-size: 16px;
+	}
+	.fa-2 {
+	    font-size: 18px;
+	}
+	.fa-3 {
+	    font-size: 24px;
+	}
+	.fa-4 {
+	    font-size: 36px;
+	}
+	.fa-5 {
+	    font-size: 48px;
+	}
+
+
+.material-icons {
+	&.md-16 {
+		font-size: 16px;
+	}
+	&.md-18 {
+		font-size: 18px;
+	}
+	&.md-24 {
+		font-size: 24px;
+	}
+	&.md-36 {
+		font-size: 36px;
+	}
+	&.md-48 {
+		font-size: 48px;
+	}
+
+}
+
+//Moodle 3.6
+#page-wrapper {	
+	min-height: 100%;
+	height: auto;
+}
+#region-main {
+	background: $smoky-white;
+	border: none;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+#region-sidebar {
+	
+}

@@ -1,0 +1,56 @@
+{{#usefeaturedblocks}}
+<section class="featured-section">
+	<div class="container">
+		<div class="row">
+			{{#featuredblocks}}
+		    {{#hasblock}}
+		    <div class="col-md-4 col-12 text-center">
+			    
+		        <div class="block-item">            
+		            {{#blockimage}}
+		            	<img class="img-responsive" src="{{{blockimage}}}"  alt="image" />
+		            {{/blockimage}}
+		                       
+		            <div class="desc">
+		            
+		                {{#blocktitle}}
+		                <h3 class="block-title">
+			                
+				            {{#blockurl}}
+			                <a href="{{{blockurl}}}">
+				            {{/blockurl}}
+				                {{{blocktitle}}}
+				            {{#blockurl}}
+				            </a>
+				            {{/blockurl}}
+			                
+			            </h3>
+		                {{/blocktitle}}
+		                
+		                {{#blockcontent}}
+		                <div class="block-content">{{{blockcontent}}}</div>
+		                {{/blockcontent}}
+		                
+		                {{#blockhascta}}
+		                <div>
+			                {{#blockurl}}
+		                    <a class="btn btn-cta" href="{{{blockurl}}}" >
+			                {{/blockurl}}
+		                    {{#blockbuttontext}}{{{blockbuttontext}}}{{/blockbuttontext}}
+		                    {{#blockurl}}
+		                    </a>
+		                    {{/blockurl}}
+		                </div>
+		                {{/blockhascta}}
+		                
+		            </div><!--//desc-->
+		            
+		        </div><!--//block-item-->
+		        
+		    </div> 
+		    {{/hasblock}}
+		    {{/featuredblocks}}
+		</div>
+	</div><!--//container-->
+</section>
+{{/usefeaturedblocks}}

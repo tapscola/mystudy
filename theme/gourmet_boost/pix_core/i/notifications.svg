@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_notifications_black_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="ic_notifications_black_24px" fill="#000000">
+            <path d="M7.2,18 C8.19,18 9,17.19 9,16.2 L5.4,16.2 C5.4,17.19 6.201,18 7.2,18 L7.2,18 Z M12.6,12.6 L12.6,8.1 C12.6,5.337 11.124,3.024 8.55,2.412 L8.55,1.8 C8.55,1.053 7.947,0.45 7.2,0.45 C6.453,0.45 5.85,1.053 5.85,1.8 L5.85,2.412 C3.267,3.024 1.8,5.328 1.8,8.1 L1.8,12.6 L0,14.4 L0,15.3 L14.4,15.3 L14.4,14.4 L12.6,12.6 L12.6,12.6 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

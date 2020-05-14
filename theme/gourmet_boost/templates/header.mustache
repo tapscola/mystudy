@@ -1,0 +1,118 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    Page header.
+}}
+
+<header id="header" class="page-header" role="banner">
+	<div class="top-bar">
+		<div class="container-fluid">
+			<div class="top-bar-inner">
+				
+				<div class="drawer-toggle" data-region="drawer-toggle">
+		            <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="drawer-toggle-btn" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">
+			            <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
+			            <span class="icon-bar-wrapper">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </span><!--//icon-bar-wrapper-->
+			        </button><!--//toggle-drawer-btn-->
+		        </div>
+				
+				{{!--//header_socialmedia (theme class function)--}}
+	            {{{ output.header_socialmedia}}}
+			
+			
+	            <div class="utilities">
+		            <!-- user_menu -->
+			        {{{ output.user_menu }}}
+			
+			        <!-- navbar_plugin_output -->
+			        {{{ output.navbar_plugin_output }}}
+			
+			        <!-- search_box -->
+			        <span class="d-none d-md-inline-block">
+			        {{{ output.search_box }}}
+			        </span>
+	            </div><!--//utilities-->
+				
+			</div><!--//top-bar-inner-->
+		</div>
+	</div><!--//top-bar-->
+	
+	<div class="branding">
+		<div class="container-fluid">
+			<div class="branding-inner">
+			  
+				
+		        
+		        <a href="{{{ config.wwwroot }}}" class="site-name {{# output.site_logo }}has-logo{{/ output.site_logo }}">
+			        {{^ output.site_logo }}
+			           {{{ sitename }}}
+			        {{/ output.site_logo }}
+			        
+		            {{# output.site_logo }}
+   
+		                <img class="site-logo" src="{{{ output.site_logo }}}" alt="{{sitename}}">
+
+		            {{/ output.site_logo }}
+		        </a>
+		        
+		        
+		        {{# output.header_widget }}
+		        <div class="header-widget d-none d-lg-inline-block">
+                    {{{ output.header_widget }}}
+                </div><!--//header-widget-->
+                {{/ output.header_widget }}
+		        
+		        
+		        <div class="header-contact float-right d-none d-md-inline-block">
+					{{#output.header_phone}}
+					<div class="item phone">
+						<i class="fa fa-phone"></i>
+						{{{ output.header_phone }}}
+					</div>
+					{{/output.header_phone}}
+					{{#output.header_email}}
+					<div class="item email">
+						<i class="fa fa-envelope"></i>
+						<a href="mailto:{{{ output.header_email }}}">{{{ output.header_email }}}</a>
+					</div>
+					{{/output.header_email}}
+				</div><!--//header-contact-->
+
+			</div><!--//branding-inner-->
+			
+		</div><!--//container-->
+	</div><!--//branding-->
+	
+	<div class="main-nav-wrapper d-none d-md-block">
+		<div class="container-fluid">
+			<ul class="main-nav">
+			<!-- custom_menu -->
+			{{{ output.custom_menu }}}
+			<!-- page_heading_menu -->
+			{{{ output.page_heading_menu }}}
+			</ul>
+		</div><!--//container-->
+	</div><!--//main-nav-->
+	
+</header><!--//header-->
+
+{{!--//moodle_validator (theme class function)--}}
+{{{ output.moodle_validator}}} 

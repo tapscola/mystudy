@@ -1,0 +1,13 @@
+{{#hasalert}}
+<div class="header-alert alert alert-dismissible" role="alert" >
+  {{#alertcontent}}
+  <div class="container-fluid header-alert-inner">
+	  <div class="alert-content" style="background-color: {{{alertbgcolor}}}"><div class="inner">{{{alertcontent}}}</div></div>
+	  
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+  </div><!--//container-->
+  {{/alertcontent}}
+</div>
+{{/hasalert}}

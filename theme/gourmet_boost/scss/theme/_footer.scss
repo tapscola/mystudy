@@ -1,0 +1,151 @@
+/********* Footer *********/
+
+#page-footer {
+	
+	color: rgba(256, 256, 256, 0.7);
+	font-size: 14px;
+	background: $theme-text-color-primary;
+	
+	a {
+        color: rgba(256, 256, 256, 0.7);
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+    
+    .footerwidget {
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        text-align: center;
+        max-width: 760px;
+        .title {
+            margin-top:0;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .helplink {
+        text-align: center;
+        img {
+           @include opacity(0.6); 
+        }
+    }
+    
+    a {
+        color: rgba(256, 256, 256, 0.7);
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+    .footer-col {
+	    color: rgba(256, 256, 256, 0.7);
+	    
+	    .footer-col-inner {
+		    padding: 0 15px;
+		    height: 100%;
+		    margin-bottom: 30px;
+	    }
+	    a {
+		    text-decoration: none;
+
+		    &:hover {
+			    text-decoration: underline;
+
+		    }
+	    }
+	    
+        ul {
+            margin-left: 0;
+        }
+
+        .fa {
+            margin-right: 10px;    
+            color: rgba(256, 256, 256, 0.4);        
+        }
+        .fa-phone {
+            font-size: 16px;
+        }
+        .footer-address {
+            .fa-map-marker {
+               font-size: 18px;
+               margin-top: 3px; 
+               margin-left: 2px;
+            } 
+        }
+
+        .title {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+ 
+    
+    }
+
+    .logininfo {
+	    margin-bottom: 30px;
+    }
+	
+    .page-footer-inner {
+	    padding-top: 45px;
+	    padding-bottom: 45px;
+    }
+    
+    
+    .footer-widget {
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        max-width: 760px;
+        
+    }
+    
+    .footer-widget-title {
+	    font-size: 18px;
+	    font-weight: 400;
+        margin-top:0;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    
+    .footer-social-media {
+	    text-align: center;
+	    margin-bottom: 30px;
+    }
+    
+    
+	.moodle-links-container {
+	    text-align: center;
+	    .nav {
+		    text-align: center;
+		    margin-bottom: 15px;
+		    ul {
+			    margin: 0 !important;
+		    }
+		    a {
+			    text-decoration: none;
+			    &:hover {
+				    text-decoration: underline;
+			    }
+		    }
+	    }
+    }
+   
+    
+    .footer-bottom-bar {
+        background: darken($theme-text-color-primary, 10%);
+        color: rgba(256, 256, 256, 0.6);
+        padding: 10px 0;
+        text-align: center;
+        copyright {
+	        font-size: 14px;
+	         
+        }
+    }
+    
+}

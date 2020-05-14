@@ -1,0 +1,23 @@
+{{#uselogos}}        
+<!-- ******PRESS****** -->         
+<section class="press-section">
+    <div class="container text-center">
+        <div class="row">
+           
+                {{#logos}}
+			    {{#haslogo}}
+                <div class="logo-item col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                {{#logoimage}}
+                    {{#logourl}}<a href="{{{logourl}}}" target="_blank">{{/logourl}}
+                    <img class="img-responsive" src="{{{logoimage}}}"  {{#logoalt}}alt="{{{logoalt}}}"{{/logoalt}} />
+                    {{#logourl}}</a>{{/logourl}}
+                {{/logoimage}}
+                </div>
+                {{/haslogo}}
+	            {{/logos}}
+
+            
+        </div><!--//row-->
+    </div><!--//container-->
+</section><!--//press-section-->
+{{/uselogos}}

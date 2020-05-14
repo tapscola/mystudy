@@ -1,0 +1,48 @@
+{{#usetestimonials}}
+<section class="testimonials-section">
+	<div class="container">
+		<div class="section-inner">
+		    <div class="carousel-controls">
+		        <a class="prev" href="#testimonials-carousel" data-slide="prev"><i class="fa fa-caret-left"></i></a>
+		        <a class="next" href="#testimonials-carousel" data-slide="next"><i class="fa fa-caret-right"></i></a>
+		    </div><!--//carousel-controls-->
+		
+		    <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
+		        <div class="carousel-inner">
+			        
+			        {{#testimonials}}
+		            {{#hastestimonial}}
+		            <div class="carousel-item item {{{itemclass}}} ">
+			            <div class="row align-items-center">
+			                <div class="profile-container col-lg-2 col-md-3 col-12 offset-lg-1 offset-md-1">
+			                    {{#testimonialimage}}
+			                    <img class="img-responsive profile " src="{{{testimonialimage}}}"  alt="image" />
+			                    {{/testimonialimage}}
+			                    {{^testimonialimage}}
+			                    <img class="img-responsive profile " src="{{{defaultimage}}}"  alt="image" />
+			                    {{/testimonialimage}}
+			                    <div class="people">
+				                    {{#testimonialname}}
+				                    <div class="name">{{{testimonialname}}}</div>
+				                    {{/testimonialname}}
+			                        {{#testimonialmeta}}
+			                        <div class="title">{{{testimonialmeta}}}</div>
+			                        {{/testimonialmeta}}
+			                    </div>  
+			                </div>
+			                <div class="quote-container col-lg-8 col-md-7 col-12">
+			                    <blockquote class="quote">                                  
+			                        <div><i class="fa fa-quote-left"></i>{{{testimonial}}}</div>
+			                    </blockquote>                            
+			                </div><!--//quote-container-->     
+			            </div>                               
+		            </div><!--//item-->
+		           {{/hastestimonial}}
+		           {{/testimonials}}
+		                        
+		        </div><!--//carousel-inner-->
+		    </div><!--//testimonials-carousel-->
+		</div><!--//section-inner-->
+	</div><!--//container-->
+</section><!--//testimonials-->
+{{/usetestimonials}}

@@ -1,0 +1,30 @@
+{{#useheroslideshow}}
+<section class="hero-section">
+	<div class="container">
+		<div class="flexslider" >
+		    <ul class="slides">
+			    {{#slideshow}}
+		        {{#hasslide}}
+		        <li class="slide">
+		            {{#slideurl}}<a href="{{{slideurl}}}" {{#urlopennew}}target="_blank"{{/urlopennew}}>{{/slideurl}}
+		            <img src="{{{slideimage}}}" alt="image" />
+		            {{#slideurl}}</a>{{/slideurl}}
+		            {{#hasslidedata}}
+		            <div class="flex-caption">
+		                {{#slidetitle}}
+		                <div class="main" >{{{slidetitle}}}</div>
+		                {{/slidetitle}}
+		                {{#slidecaption}}
+		                <br>
+		                <div class="secondary" >{{{slidecaption}}}</div>
+		                {{/slidecaption}}
+		            </div>
+		            {{/hasslidedata}}
+		        </li>
+		        {{/hasslide}}
+		        {{/slideshow}}
+		    </ul><!--//slides-->
+		</div><!--//flexslider-->
+	</div>
+</section>
+{{/useheroslideshow}}
